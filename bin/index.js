@@ -8,6 +8,7 @@ const gitClone = require('git-clone');
 const figlet = require('figlet');
 const fs = require('fs-extra');
 const path = require('path');
+const { gitInit } = require('../src/git');
 const { checkFileIsExist, removeFile, createFilePath } = require('../src/file');
 const pkg = require('../package.json');
 
@@ -136,13 +137,13 @@ program
         await changePackageJson(name);
         spinner.succeed('下载成功');
         fs.remove(path.resolve(filePath, '.git'));
+        await gitInit();
         console.log('Done! Now run:');
         console.log(chalk.green(` cd ${name}`));
         console.log(chalk.green(` ${res.tool} install`));
         console.log(chalk.green(` ${res.tool} start`));
       }
     })
-
   })
 // 修改package.json中的内容
 function changePackageJson(name) {
