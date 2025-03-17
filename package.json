@@ -1,0 +1,27 @@
+{
+  "name": "vita-create-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "vita-simple-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node ./bin/index.js"
+  },
+  "keywords": [
+    "node",
+    "react"
+  ],
+  "author": "zhangyongmg@126.com",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4.0.0",
+    "commander": "^13.0.0",
+    "figlet": "^1.8.0",
+    "fs-extra": "^11.2.0",
+    "git-clone": "^0.2.0",
+    "inquirer": "^8.0.0",
+    "ora": "^5.0.0"
+  }
+}
