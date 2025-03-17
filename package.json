@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "vita-simple-cli": "./bin/index.js"
+    "vita-create-app": "./bin/index.js"
   },
   "scripts": {
     "start": "node ./bin/index.js"
